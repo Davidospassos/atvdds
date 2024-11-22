@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: BALANÇO FINANCEIRO
+    Faça um script que peça para o usuário informar as despesas relacionadas com:
+    - Conta de água
+    - Conta de energia elétrica
+    - Conta de telefone
+    - Supermercado
+    Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
+    Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
+    */
+
+    //ENTRADA
+    const agua = Number(prompt(`Informe quanto gasta com água`));
+    const energiaeletricas = Number(prompt(`Informe quanto gasta com energia`));
+    const telefona = Number(prompt(`Informe quanto gasta de tefelone`));
+    const mercado = Number(prompt(`Informe quanto gasta de comprinhas`));
+    const salario = Number(prompt(`Informe quanto você ganha mensalmente`));
+    const despezas = agua + energiaeletricas + telefona + mercado;
+    const sobra = salario - despezas;
+    const falta = despezas - salario
+    let mensagem = "";
+    //PROCESSAMENTO
+    (salario > despezas) ? mensagem = `Sobrou R$${sobra} no fim do mês` : mensagem = `Faltou R$${falta} pra quitar as contas`
+    
+    //SAÍDA
+    document.write(`${mensagem}`)
+</script>
